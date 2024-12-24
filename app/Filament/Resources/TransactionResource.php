@@ -35,7 +35,7 @@ class TransactionResource extends Resource
                     ]),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
-                Forms\Components\DatePicker::make('transaction_date')
+                Forms\Components\DatePicker::make('transaction_date')->default(now())
                     ->required(),
             ]);
     }

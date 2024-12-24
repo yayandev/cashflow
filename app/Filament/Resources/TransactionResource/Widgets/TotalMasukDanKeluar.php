@@ -14,14 +14,14 @@ class TotalMasukDanKeluar extends BaseWidget
         $totalUangSaatIni = Transaction::where('type', 'masuk')->sum('amount') - Transaction::where('type', 'keluar')->sum('amount');
 
         $totalUangMasuk = Transaction::where('type', 'masuk')->sum('amount');
-        $totalUangMasukHariIni = Transaction::where('type', 'masuk')->whereDate('transaction_date', now())->sum('amount');
-        $totalUangMasukBulanIni = Transaction::where('type', 'masuk')->whereMonth('transaction_date', now())->sum('amount');
-        $totalUangMasukTahunIni = Transaction::where('type', 'masuk')->whereYear('transaction_date', now())->sum('amount');
+        $totalUangMasukHariIni = Transaction::where('type', 'masuk')->whereDate('created_at', now())->sum('amount');
+        $totalUangMasukBulanIni = Transaction::where('type', 'masuk')->whereMonth('created_at', now())->sum('amount');
+        $totalUangMasukTahunIni = Transaction::where('type', 'masuk')->whereYear('created_at', now())->sum('amount');
 
         $totalUangKeluar = Transaction::where('type', 'keluar')->sum('amount');
-        $totalUangKeluarHariIni = Transaction::where('type', 'keluar')->whereDate('transaction_date', now())->sum('amount');
-        $totalUangKeluarBulanIni = Transaction::where('type', 'keluar')->whereMonth('transaction_date', now())->sum('amount');
-        $totalUangKeluarTahunIni = Transaction::where('type', 'keluar')->whereYear('transaction_date', now())->sum('amount');
+        $totalUangKeluarHariIni = Transaction::where('type', 'keluar')->whereDate('created_at', now())->sum('amount');
+        $totalUangKeluarBulanIni = Transaction::where('type', 'keluar')->whereMonth('created_at', now())->sum('amount');
+        $totalUangKeluarTahunIni = Transaction::where('type', 'keluar')->whereYear('created_at', now())->sum('amount');
         return [
             //
             Stat::make('Total Uang Saat Ini', "Rp." . number_format($totalUangSaatIni, 0, ',', '.'))
