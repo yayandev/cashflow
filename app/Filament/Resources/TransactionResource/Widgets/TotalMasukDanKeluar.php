@@ -30,19 +30,19 @@ class TotalMasukDanKeluar extends BaseWidget
                 ->color('warning'),
             Stat::make('Total Uang Masuk', "Rp." . number_format($totalUangMasuk, 0, ',', '.'))
                 ->description('Total Uang Masuk')
-                ->descriptionIcon('heroicon-s-arrow-trending-down')
+                ->descriptionIcon('heroicon-s-arrow-trending-up')
                 ->color('success'),
             Stat::make('Total Uang Masuk Hari Ini', "Rp." . number_format($totalUangMasukHariIni, 0, ',', '.'))
                 ->description('Total Uang Masuk Hari Ini')
-                ->descriptionIcon('heroicon-s-arrow-trending-down')
+                ->descriptionIcon('heroicon-s-arrow-trending-up')
                 ->color('success'),
             Stat::make('Total Uang Masuk Bulan Ini', "Rp." . number_format($totalUangMasukBulanIni, 0, ',', '.'))
                 ->description('Total Uang Masuk Bulan Ini')
-                ->descriptionIcon('heroicon-s-arrow-trending-down')
+                ->descriptionIcon('heroicon-s-arrow-trending-up')
                 ->color('success'),
             Stat::make('Total Uang Masuk Tahun Ini', "Rp." . number_format($totalUangMasukTahunIni, 0, ',', '.'))
                 ->description('Total Uang Masuk Tahun Ini')
-                ->descriptionIcon('heroicon-s-arrow-trending-down')
+                ->descriptionIcon('heroicon-s-arrow-trending-up')
                 ->color('success'),
             Stat::make('Total Uang Keluar', "Rp." . number_format($totalUangKeluar, 0, ',', '.'))
                 ->description('Total Uang Keluar')
